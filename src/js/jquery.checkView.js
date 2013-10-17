@@ -4,7 +4,7 @@
 	
 	var defaults = {
 		'containerClass': 'checkview', 
-		'iconClass': 'icon-ok', 
+		'iconClass': 'icon-ok',
 		'autoSubmit': true
 	};
 	

@@ -9,12 +9,15 @@ Options
 -------
 <table>
   <tr>
-    <th>ID</th><th>Name</th><th>Rank</th>
+    <th>Option</th><th>Description</th>
   </tr>
   <tr>
-    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+    <td>containerClass</td><td>Container css class</td>
   </tr>
   <tr>
-    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+    <td>iconClass</td><td>Icon css class</td>
+  </tr>
+  <tr>
+    <td>autoSubmit</td><td>Specifies whether to submit form on element change</td>
   </tr>
 </table>
