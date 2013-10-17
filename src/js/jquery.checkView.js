@@ -3,9 +3,9 @@
 	var pluginName = 'checkView';
 	
 	var defaults = {
-		'css': 'checkview', 
-		'iconCSS': 'icon-ok', 
-		'submitOnKeyPress': true
+		'containerClass': 'checkview', 
+		'iconClass': 'icon-ok', 
+		'autoSubmit': true
 	};
 	
 	function isChildOf(child, parent) {
@@ -48,7 +48,7 @@
 			 : previousElement && previousElement.tagName == "input" && previousElement.type == "hidden" ? previousElement
 			 : null;
 		
-		var containerView = $(element).parents("." + options.css)[0];
+		var containerView = $(element).parents("." + options.containerClass)[0];
 		if (!containerView) {
 		   containerView = doc.createElement('span');
 		   element.parentNode.insertBefore(containerView, element);
@@ -63,7 +63,7 @@
 		
 		var checkmarkIcon = doc.createElement('i');
 		checkmarkIcon.style.margin = "0";
-		checkmarkIcon.className = options.iconCSS;
+		checkmarkIcon.className = options.iconClass;
 		containerView.appendChild(checkmarkIcon);
 
 		function toggleCheckbox() {
@@ -110,7 +110,7 @@
 					checkboxView.invalidate();
 				}
 				
-				if (event.which == 13 && options.submitOnKeyPress) {
+				if (event.which == 13 && options.autoSubmit) {
 					if (element.form) {
 						element.form.submit();
 					}
