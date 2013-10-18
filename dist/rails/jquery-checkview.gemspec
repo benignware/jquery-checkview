@@ -8,8 +8,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{jQuery customizable checkbox}
   s.description = %q{jQuery customizable checkbox for Rails 3.1 Asset Pipeline}
 
-  s.rubyforge_project = "jquery-fileupload-rails"
-
   s.files = Dir["dist/rails/vendor/**/*"]
   
 end
