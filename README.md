@@ -17,12 +17,17 @@ $(document).ready(function() {
 });
 ```
 
+Get access to the plugin-instance:
+```
+var checkView = $("input[type='checkbox']").data('checkView');
+```
+
 
 Options
 -------
 <table>
   <tr>
-    <th>Option</th><th>Description</th><th>Default</th>
+    <th>Name</th><th>Description</th><th>Default</th>
   </tr>
   <tr>
     <td>containerClass</td><td>Container css class</td><td>checkview</td>
@@ -39,7 +44,7 @@ Methods
 -------
 <table>
   <tr>
-    <th>Method</th><th>Description</th><th>Return</th>
+    <th>Name</th><th>Description</th><th>Return</th>
   </tr>
   <tr>
     <td>invalidate</td><td>Refreshes the component</td><td>void</td>
