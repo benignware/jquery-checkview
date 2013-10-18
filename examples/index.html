@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	    <meta charset="utf-8"/>
+	    
+	    <!-- example of jquery checkview component -->
+	    
+	    <title>CheckView</title>
+	    
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	    
+	    <link href="http://localhost/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	    <link href="../src/css/bootstrap.checkView.css" rel="stylesheet">
+	    
+	    <script src="http://localhost/lib/jquery/jquery.js"></script>
+	    <script src="../src/js/jquery.checkView.js"></script>
+	    
+		<script>
+			$(document).ready(function() {
+				$("input[type='checkbox']").checkView();
+			});
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		<header class="subhead" id="overview">
+		  <div class="container">
+		    <h1>CheckboxView</h1>
+		    <p class="lead">Customizable Checkbox Example</p>
+		  </div>
+		</header>
+
+
+  		<div class="container">
+		
+			<form class="well">
+				<fieldset>
+					<legend>Form</legend>
+					<label>Label name</label>
+					<input type="text" name="text" placeholder="Type something">
+					<label>
+						<input type="checkbox" name="checkme"/> <span>Check me</span>
+					</label>
+					<button type="submit" class="btn">Submit</button>
+				</fieldset>
+			</form>
+		
+		</div>
+		
+	</body>
+</html>

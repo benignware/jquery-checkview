@@ -1,0 +1,22 @@
+<project name="CheckView" default="build">
+	
+	<property file="build.properties"/>
+	
+	<target name="build">
+		    
+		<mkdir dir="${build.dir}"/>
+	
+	    <copy todir="${build.dir}">
+	    
+	      <fileset dir="${basedir}/src"></fileset>
+	    	
+	    </copy>
+		
+		<java jar="${build.yuicompressor}" fork="true" failonerror="true">
+			<arg value="${basedir}/src/js/jquery.checkView.js"/>
+			<arg line="-o ${build.dir}/js/jquery.checkView.min.js"/>
+		</java>
+	
+	</target>
+	
+</project>

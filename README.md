@@ -1,9 +1,17 @@
 jquery.checkView
 ================
 
-jQuery plugin enabling custom css styling of checkboxes
+This jQuery plugin enables custom css styling on checkboxes. 
 
-Test xxx
+Features
+--------
+* Custom css styling
+* Keyboard and Tab control
+
+Example
+-------
+
+$("input[type='checkbox']").checkView();
 
 Options
 -------
@@ -19,5 +27,22 @@ Options
   </tr>
   <tr>
     <td>autoSubmit</td><td>Specifies whether to submit form on element change</td><td>false</td>
+  </tr>
+</table>
+
+Methods
+-------
+<table>
+  <tr>
+    <th>Method</th><th>Description</th><th>Default</th>
+  </tr>
+  <tr>
+    <td>invalidate</td><td>Refreshes the component</td>
+  </tr>
+  <tr>
+    <td>setChecked(bool)</td><td>Set the checked state of the component</td>
+  </tr>
+  <tr>
+    <td>getChecked</td><td>Returns the checked state of the component</td>
   </tr>
 </table>
