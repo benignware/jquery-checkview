@@ -1,22 +1,44 @@
-<project name="CheckView" default="build">
+<project name="JQuery Plugin Builder" default="all">
+	
+	<property name="vendor" value="benignware"/>
 	
 	<property file="build.properties"/>
 	
-	<target name="build">
+	<target name="standard">
 		    
 		<mkdir dir="${build.dir}"/>
 	
-	    <copy todir="${build.dir}">
+	    <copy todir="${build.dir}/standard">
 	    
 	      <fileset dir="${basedir}/src"></fileset>
 	    	
 	    </copy>
 		
 		<java jar="${build.yuicompressor}" fork="true" failonerror="true">
-			<arg value="${basedir}/src/js/jquery.checkView.js"/>
-			<arg line="-o ${build.dir}/js/jquery.checkView.min.js"/>
+			<arg value="${build.dir}/standard/js/jquery.${build.plugin.name}.js"/>
+			<arg line="-o ${build.dir}/standard/js/jquery.${build.plugin.name}.min.js"/>
 		</java>
 	
 	</target>
+	
+	<target name="rails" depends="standard">
+			    
+		<mkdir dir="${build.dir}/rails"/>
+	
+	    <copy todir="${build.dir}/rails/vendor/stylesheets/${vendor}">
+	    
+	      <fileset dir="${build.dir}/standard/css"></fileset>
+	    	
+	    </copy>
+		
+		<copy todir="${build.dir}/rails/vendor/javascripts/${vendor}">
+	    
+	      <fileset dir="${build.dir}/standard/css"></fileset>
+	    	
+	    </copy>
+	
+	</target>
+
+	<target name="all" depends="standard,rails"></target>
 	
 </project>
