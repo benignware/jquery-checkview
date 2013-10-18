@@ -11,7 +11,13 @@ Features
 Example
 -------
 
-$("input[type='checkbox']").checkView();
+```
+$(document).ready(function() {
+	$("input[type='checkbox']").checkView();
+});
+
+```
+
 
 Options
 -------
@@ -34,15 +40,15 @@ Methods
 -------
 <table>
   <tr>
-    <th>Method</th><th>Description</th><th>Default</th>
+    <th>Method</th><th>Description</th><th>Return</th>
   </tr>
   <tr>
-    <td>invalidate</td><td>Refreshes the component</td>
+    <td>invalidate</td><td>Refreshes the component</td><td>void</td>
   </tr>
   <tr>
-    <td>setChecked(bool)</td><td>Set the checked state of the component</td>
+    <td>setChecked(bool)</td><td>Set the checked state of the component</td><td>void</td>
   </tr>
   <tr>
-    <td>getChecked</td><td>Returns the checked state of the component</td>
+    <td>getChecked</td><td>Returns the checked state of the component</td><td>boolean</td>
   </tr>
 </table>
