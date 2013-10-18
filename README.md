@@ -1,4 +1,4 @@
-jquery.checkView
+jquery-checkview
 ================
 
 This jQuery plugin enables custom css styling on checkboxes. 
@@ -15,7 +15,6 @@ Example
 $(document).ready(function() {
 	$("input[type='checkbox']").checkView();
 });
-
 ```
 
 
