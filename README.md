@@ -56,3 +56,22 @@ Methods
     <td>getChecked</td><td>Returns the checked state of the component</td><td>boolean</td>
   </tr>
 </table>
+
+Rails
+-----
+
+To integrate jquery-checkview with rails add the jquery-benignware-rails gem to your application bundle
+
+```
+gem 'jquery-benignware-rails'
+```
+
+Require the javascript in your application.js
+```
+//= require benignware/jquery.checkView.js
+```
+
+Optionally require the bootstrap-theme for jquery-checkview in your application.css
+```
+ *= require benignware/jquery-checkview.bootstrap.css
+```
