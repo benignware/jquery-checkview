@@ -1,7 +1,7 @@
 jquery-checkview
 ================
 
-This jQuery plugin enables custom css styling on checkboxes. 
+This jQuery plugin enables custom css styling of checkboxes and radiobuttons.
 
 Features
 --------
