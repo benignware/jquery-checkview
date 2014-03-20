@@ -50,7 +50,6 @@
 		
 
 		// private methods
-		
 		function init() {
 			
 			if (!element.value) {
@@ -80,6 +79,7 @@
 		    
 			$element.bind('change', function(event) {
 				checkView.invalidate();
+				invalidateRadios.call(this);
 				window.clearTimeout(toggleClickTimeoutId);
 			});
       
@@ -97,13 +97,18 @@
 			
 		};
 		
+		
 		function layout() {
+		  
+		  console.log("LAYOUT CHECKVIEW", element.checked);
+		  
 		  var $containerView = $(containerView);
 			if (element.checked) {
 				$containerView.addClass('checked');
 			} else {
 				$containerView.removeClass('checked');
 			}
+			
 			var $copyStyles = $(['margin-left']);
 			var css = {};
 			$copyStyles.each(function() {
@@ -118,9 +123,23 @@
 			checkmarkIcon.style.top = (($(containerView).height() - $(checkmarkIcon).height()) / 2) + 'px';
 		};
 		
+		
+		function invalidateRadios() {
+      console.log("INVALIDATE RADIOS: ");
+      $("input[type='radio'][name='" + element.name + "']", element.form).each(function() {
+        var checkview = $(this).data('checkview');
+        console.log("RADIO CHECKVIEW FOUND", this == element);
+        if (checkview && this != element) {
+          checkview.invalidate();
+          console.log("DO IT RADIO CHECKVIEW FOUND", this == element);
+        }
+      });
+    }
+    
 		// public methods
 		
 		this.setChecked = function(bool) {
+		  console.log("CHECKVIEW SET CHECKED: ", bool);
 			element.checked = bool;
 			if (bool) {
 			  $element.attr('checked', 'checked');

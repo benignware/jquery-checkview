@@ -13,13 +13,13 @@ Example
 
 ```
 $(document).ready(function() {
-	$("input[type='checkbox']").checkView();
+	$("input[type='checkbox'], input[type='radio']").checkview();
 });
 ```
 
 Get access to the plugin-instance:
 ```
-var checkView = $("input[type='checkbox']").data('checkView');
+var checkview = $("#checkview").data('checkview');
 ```
 
 
@@ -56,6 +56,14 @@ Methods
     <td>getChecked</td><td>Returns the checked state of the component</td><td>boolean</td>
   </tr>
 </table>
+
+
+Bootstrap
+---------
+
+If you're using bootstrap 3, note that you can achieve a similar functionality with the button plugin:
+http://getbootstrap.com/javascript/#buttons
+
 
 Rails
 -----
