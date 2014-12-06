@@ -66,16 +66,16 @@ Options
     <th>Name</th><th>Description</th><th>Default</th>
   </tr>
   <tr>
-    <td>wrapperClass</td><td>Container css class</td><td>checkview</td>
-  </tr>
-  <tr>
-    <td>wrapperTag</td><td>Container tag name</td><td>span</td>
-  </tr>
-  <tr>
     <td>iconClass</td><td>Icon css class</td><td>icon-ok</td>
   </tr>
   <tr>
     <td>preventSubmit</td><td>Specifies whether to propagate pressing of enter key</td><td>false</td>
+  </tr>
+  <tr>
+    <td>wrapperClass</td><td>Container css class</td><td>checkview</td>
+  </tr>
+  <tr>
+    <td>wrapperTag</td><td>Container tag name</td><td>span</td>
   </tr>
 </table>
 
