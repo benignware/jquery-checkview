@@ -1,26 +1,62 @@
 jquery-checkview
 ================
 
-This jQuery plugin enables custom css styling of checkboxes and radiobuttons.
+> This jQuery plugin enables custom css styling of checkboxes and radiobuttons.
 
 Features
 --------
 * Custom css styling
 * Keyboard and Tab control
 
-Example
--------
+Basic Usage
+-----------
 
-```
-$(document).ready(function() {
-	$("input[type='checkbox'], input[type='radio']").checkview();
+Init checkview as follows:
+
+```js
+$(function() {
+  $("input[type='checkbox'], input[type='radio']").checkview();
 });
 ```
 
-Get access to the plugin-instance:
+Set up your css. Take a look at the example styles:
+
+```css
+.checkview {
+  background-color: #FFFFFF;
+  border: 1px solid #ACACAC;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.checkview:focus {
+  /* Add custom focus styles here */
+}
+
+.checkview .icon-ok {
+  display: inline-block;
+  background: url('http://cdn.dustball.com/tick.png') no-repeat center;
+  width: 100%;
+  height: 100%;
+}
 ```
-var checkview = $("#checkview").data('checkview');
+
+
+Example using bootstrap
+-----------------------
+
+Init checkview to work with bootstrap's button and icon components:
+
+```js
+$(function() {
+  $("input[type='checkbox'], input[type='radio']").checkview({
+    wrapperClass: 'btn btn-default btn-xs btn-mini',
+    iconClass: 'glyphicon glyphicon-ok'
+  });
+});
 ```
+
 
 
 Options
@@ -30,56 +66,38 @@ Options
     <th>Name</th><th>Description</th><th>Default</th>
   </tr>
   <tr>
-    <td>containerClass</td><td>Container css class</td><td>checkview</td>
+    <td>wrapperClass</td><td>Container css class</td><td>checkview</td>
+  </tr>
+  <tr>
+    <td>wrapperTag</td><td>Container tag name</td><td>span</td>
   </tr>
   <tr>
     <td>iconClass</td><td>Icon css class</td><td>icon-ok</td>
   </tr>
   <tr>
-    <td>autoSubmit</td><td>Specifies whether to submit form on element change</td><td>false</td>
+    <td>preventSubmit</td><td>Specifies whether to prevent form submit when return key was clicked</td><td>false</td>
   </tr>
 </table>
 
 Methods
 -------
+
+Access plugin-instance and refresh
+```
+$("#checkview").data('checkview').refresh();
+```
 <table>
   <tr>
     <th>Name</th><th>Description</th><th>Return</th>
   </tr>
   <tr>
+    <td>getChecked</td><td>Returns the checkview's state</td><td>boolean</td>
+  </tr>
+  <tr>
     <td>invalidate</td><td>Refreshes the component</td><td>void</td>
   </tr>
   <tr>
-    <td>setChecked(bool)</td><td>Set the checked state of the component</td><td>void</td>
-  </tr>
-  <tr>
-    <td>getChecked</td><td>Returns the checked state of the component</td><td>boolean</td>
+    <td>setChecked(bool)</td><td>Sets the checkview's state</td><td>void</td>
   </tr>
 </table>
 
-
-Bootstrap
----------
-
-If you're using bootstrap 3, note that you can achieve a similar functionality with the button plugin:
-http://getbootstrap.com/javascript/#buttons
-
-
-Rails
------
-
-To integrate jquery-checkview with rails add the jquery-benignware-rails gem to your application bundle
-
-```
-gem 'jquery-benignware-rails'
-```
-
-Require the javascript in your application.js
-```
-//= require benignware/jquery.checkView.js
-```
-
-Optionally require the bootstrap-theme for jquery-checkview in your application.css
-```
- *= require benignware/jquery-checkview.bootstrap.css
-```
