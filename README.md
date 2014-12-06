@@ -82,10 +82,6 @@ Options
 Methods
 -------
 
-Access plugin-instance and refresh
-```
-$("#checkview").data('checkview').refresh();
-```
 <table>
   <tr>
     <th>Name</th><th>Description</th><th>Return</th>
@@ -101,3 +97,9 @@ $("#checkview").data('checkview').refresh();
   </tr>
 </table>
 
+## Method example
+Access plugin-instance and refresh
+
+```
+$("#checkview").data('checkview').refresh();
+```
