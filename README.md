@@ -75,7 +75,7 @@ Options
     <td>iconClass</td><td>Icon css class</td><td>icon-ok</td>
   </tr>
   <tr>
-    <td>preventSubmit</td><td>Specifies whether to prevent form submit when return key was clicked</td><td>false</td>
+    <td>preventSubmit</td><td>Specifies whether to propagate pressing of enter</td><td>false</td>
   </tr>
 </table>
 
