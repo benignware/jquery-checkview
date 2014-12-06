@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>/Users/aphorisme/git/jquery-checkview/.README.md.html</title>
+<title>/Users/rafaelnowrotek/Documents/Projekte/Benignware/JQuery/Workspace/jquery-checkview/.README.md.html</title>
 
 
 <style type="text/css">
 body {
 	color: #333;
 	font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+	font-family: sans-serif;
 }
 
 .markdown-body {
@@ -90,6 +91,14 @@ body {
 }
 .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
     margin: 15px 0;
+}
+.markdown-body hr {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x;
+    border: 0;
+    color: #CCC;
+    height: 4px;
+    margin: 15px 0;
+    padding: 0;
 }
 .markdown-body ul, .markdown-body ol {
     padding-left: 30px;
@@ -449,22 +458,54 @@ function setDocumentScrollTop(ypos)
 
 </head>
 <body class="markdown-body">
-<h1> <a name="jquery-checkview" class="anchor" href="..md.html#jquery-checkview"><span class="octicon octicon-link"></span></a>jquery-checkview</h1> 
-<p>This jQuery plugin enables custom css styling on checkboxes. </p> 
-<h2> <a name="features" class="anchor" href="..md.html#features"><span class="octicon octicon-link"></span></a>Features</h2> 
+<h1> <a id="user-content-jquery-checkview" class="anchor" href="#jquery-checkview" aria-hidden="true"><span class="octicon octicon-link"></span></a>jquery-checkview</h1> 
+<blockquote> 
+ <p>This jQuery plugin enables custom css styling of checkboxes and radiobuttons.</p> 
+</blockquote> 
+<h2> <a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2> 
 <ul> 
  <li>Custom css styling</li> 
  <li>Keyboard and Tab control</li> 
-</ul>
-<h2> <a name="example" class="anchor" href="..md.html#example"><span class="octicon octicon-link"></span></a>Example</h2> 
-<pre><code>$(document).ready(function() {
-    $(&quot;input[type='checkbox']&quot;).checkView();
-});
-</code></pre> 
-<p>Get access to the plugin-instance:</p> 
-<pre><code>var checkView = $(&quot;input[type='checkbox']&quot;).data('checkView');
-</code></pre> 
-<h2> <a name="options" class="anchor" href="..md.html#options"><span class="octicon octicon-link"></span></a>Options</h2> 
+</ul> 
+<h2> <a id="user-content-basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Usage</h2> 
+<p>Init checkview as follows:</p> 
+<div class="highlight highlight-js">
+ <pre>$(<span class="pl-st">function</span>() {
+  $(<span class="pl-s1"><span class="pl-pds">&quot;</span>input[type='checkbox'], input[type='radio']<span class="pl-pds">&quot;</span></span>).checkview();
+});</pre>
+</div> 
+<p>Set up your css. Take a look at the example styles:</p> 
+<div class="highlight highlight-css">
+ <pre><span class="pl-e">.checkview</span> {
+  <span class="pl-mp"><span class="pl-s3">background-color</span></span>: <span class="pl-c1">#FFFFFF</span>;
+  <span class="pl-mp"><span class="pl-s3">border</span></span>: <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-c1">#ACACAC</span>;
+  <span class="pl-mp">-webkit-tap-highlight-<span class="pl-s3">color</span></span>: <span class="pl-s3">rgba</span>(<span class="pl-c1">0,0,0,0</span>);
+  <span class="pl-mp"><span class="pl-s3">width</span></span>: <span class="pl-c1">1.4<span class="pl-k">em</span></span>;
+  <span class="pl-mp"><span class="pl-s3">height</span></span>: <span class="pl-c1">1.4<span class="pl-k">em</span></span>;
+}
+
+<span class="pl-e">.checkview</span><span class="pl-e">:focus</span> {
+  <span class="pl-c">/* Add custom focus styles here */</span>
+}
+
+<span class="pl-e">.checkview</span> <span class="pl-e">.icon-ok</span> {
+  <span class="pl-mp"><span class="pl-s3">display</span></span>: <span class="pl-sc">inline-block</span>;
+  <span class="pl-mp"><span class="pl-s3">background</span></span>: <span class="pl-s3">url</span>(<span class="pl-s1"><span class="pl-pds">'</span>http://cdn.dustball.com/tick.png<span class="pl-pds">'</span></span>) <span class="pl-sc">no-repeat</span> <span class="pl-sc">center</span>;
+  <span class="pl-mp"><span class="pl-s3">width</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;
+  <span class="pl-mp"><span class="pl-s3">height</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;
+}</pre>
+</div> 
+<h2> <a id="user-content-example-using-bootstrap" class="anchor" href="#example-using-bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using bootstrap</h2> 
+<p>Init checkview to work with bootstrap's button and icon components:</p> 
+<div class="highlight highlight-js">
+ <pre>$(<span class="pl-st">function</span>() {
+  $(<span class="pl-s1"><span class="pl-pds">&quot;</span>input[type='checkbox'], input[type='radio']<span class="pl-pds">&quot;</span></span>).checkview({
+    wrapperClass<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>btn btn-default btn-xs btn-mini<span class="pl-pds">'</span></span>,
+    iconClass<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>glyphicon glyphicon-ok<span class="pl-pds">'</span></span>
+  });
+});</pre>
+</div> 
+<h2> <a id="user-content-options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2> 
 <table> 
  <tbody>
   <tr> 
@@ -473,9 +514,14 @@ function setDocumentScrollTop(ypos)
    <th>Default</th> 
   </tr> 
   <tr> 
-   <td>containerClass</td> 
+   <td>wrapperClass</td> 
    <td>Container css class</td> 
    <td>checkview</td> 
+  </tr> 
+  <tr> 
+   <td>wrapperTag</td> 
+   <td>Container tag name</td> 
+   <td>span</td> 
   </tr> 
   <tr> 
    <td>iconClass</td> 
@@ -483,13 +529,16 @@ function setDocumentScrollTop(ypos)
    <td>icon-ok</td> 
   </tr> 
   <tr> 
-   <td>autoSubmit</td> 
-   <td>Specifies whether to submit form on element change</td> 
+   <td>preventSubmit</td> 
+   <td>Specifies whether to prevent form submit when return key was clicked</td> 
    <td>false</td> 
   </tr> 
  </tbody>
-</table>
-<h2> <a name="methods" class="anchor" href="..md.html#methods"><span class="octicon octicon-link"></span></a>Methods</h2> 
+</table> 
+<h2> <a id="user-content-methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2> 
+<p>Access plugin-instance and refresh</p> 
+<pre><code>$(&quot;#checkview&quot;).data('checkview').refresh();
+</code></pre> 
 <table> 
  <tbody>
   <tr> 
@@ -498,31 +547,21 @@ function setDocumentScrollTop(ypos)
    <th>Return</th> 
   </tr> 
   <tr> 
+   <td>getChecked</td> 
+   <td>Returns the checkview's state</td> 
+   <td>boolean</td> 
+  </tr> 
+  <tr> 
    <td>invalidate</td> 
    <td>Refreshes the component</td> 
    <td>void</td> 
   </tr> 
   <tr> 
    <td>setChecked(bool)</td> 
-   <td>Set the checked state of the component</td> 
+   <td>Sets the checkview's state</td> 
    <td>void</td> 
-  </tr> 
-  <tr> 
-   <td>getChecked</td> 
-   <td>Returns the checked state of the component</td> 
-   <td>boolean</td> 
   </tr> 
  </tbody>
 </table>
-<h2> <a name="rails" class="anchor" href="..md.html#rails"><span class="octicon octicon-link"></span></a>Rails</h2> 
-<p>To integrate jquery-checkview with rails add the jquery-benignware-rails gem to your application bundle</p> 
-<pre><code>gem 'jquery-benignware-rails'
-</code></pre> 
-<p>Require the javascript in your application.js</p> 
-<pre><code>//= require benignware/jquery.checkView.js
-</code></pre> 
-<p>Optionally require the bootstrap-theme for jquery-checkview in your application.css</p> 
-<pre><code> *= require benignware/jquery-checkview.bootstrap.css
-</code></pre>
 </body>
 </html>
