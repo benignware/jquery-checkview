@@ -51,7 +51,7 @@ Init checkview to work with bootstrap's button and icon components:
 ```js
 $(function() {
   $("input[type='checkbox'], input[type='radio']").checkview({
-    wrapperClass: 'btn btn-default btn-xs btn-mini',
+    wrapperClass: 'btn btn-default btn-xs',
     iconClass: 'glyphicon glyphicon-ok'
   });
 });
