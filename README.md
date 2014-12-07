@@ -30,10 +30,6 @@ Set up your css. Take a look at the example styles:
   height: 1.4em;
 }
 
-.checkview:focus {
-  /* Add custom focus styles here */
-}
-
 .checkview .icon-ok {
   display: inline-block;
   background: url('http://cdn.dustball.com/tick.png') no-repeat center;
@@ -64,6 +60,9 @@ Options
 <table>
   <tr>
     <th>Name</th><th>Description</th><th>Default</th>
+  </tr>
+  <tr>
+    <td>checkedClass</td><td>CSS Class to indicate the checkview's state</td><td>checkview</td>
   </tr>
   <tr>
     <td>iconClass</td><td>Icon css class</td><td>icon-ok</td>

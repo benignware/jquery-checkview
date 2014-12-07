@@ -3,6 +3,7 @@
   var pluginName = 'checkview';
   
   var defaults = {
+    'checkedClass': 'checked',
     'wrapperTag': 'span', 
     'wrapperClass': 'checkview', 
     'iconClass': 'icon-ok',
@@ -108,9 +109,9 @@
     function layout() {
       var $containerView = $(containerView);
       if (element.checked) {
-        $containerView.addClass('checked');
+        $containerView.addClass(options.checkedClass);
       } else {
-        $containerView.removeClass('checked');
+        $containerView.removeClass(options.checkedClass);
       }
       var $copyStyles = $(['margin-left']);
       var css = {};
