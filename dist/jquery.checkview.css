@@ -1,4 +1,3 @@
-
 .checkview {
   background-color: #FFFFFF;
   border: 1px solid #ACACAC;
@@ -7,8 +6,9 @@
   height: 1.4em;
 }
 
-.checkview i {
+.checkview .icon-ok {
+  display: inline-block;
   background: url('http://cdn.dustball.com/tick.png') no-repeat center;
-  width: 100%;
-  height: 100%;
+  width: 16px;
+  height: 16px;
 }
