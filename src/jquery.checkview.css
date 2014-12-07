@@ -1,3 +1,4 @@
+
 .checkview {
   background-color: #FFFFFF;
   border: 1px solid #ACACAC;
@@ -6,12 +7,7 @@
   height: 1.4em;
 }
 
-.checkview:focus {
-  /* Add custom focus styles here */
-}
-
-.checkview .icon-ok {
-  display: inline-block;
+.checkview i {
   background: url('http://cdn.dustball.com/tick.png') no-repeat center;
   width: 100%;
   height: 100%;
