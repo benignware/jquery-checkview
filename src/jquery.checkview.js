@@ -3,7 +3,6 @@
   var pluginName = 'checkview';
   
   var defaults = {
-    'checkedClass': 'checked',
     'wrapperTag': 'span', 
     'wrapperClass': 'checkview', 
     'iconClass': 'icon-ok',
@@ -61,6 +60,7 @@
 
       element.style.visibility = "hidden";
       containerView.appendChild(element);
+      checkmarkIcon.style.verticalAlign = "top";
       
       $containerView.bind('click', function(event) {
         if (event.target !== element && !$(event.target).parents('label').length) {
@@ -108,11 +108,11 @@
     function layout() {
       var $containerView = $(containerView);
       if (element.checked) {
-        $containerView.addClass(options.checkedClass);
+        $containerView.addClass('checked');
       } else {
-        $containerView.removeClass(options.checkedClass);
+        $containerView.removeClass('checked');
       }
-      var $copyStyles = $(['margin-left', 'margin-right']);
+      var $copyStyles = $(['margin-left']);
       var css = {};
       $copyStyles.each(function() {
         var value = $element.css(this);
@@ -121,7 +121,11 @@
         }
       });
       $containerView.css(css);
+      
       checkmarkIcon.style.visibility = element.checked ? '' : 'hidden';
+      //checkmarkIcon.style.position = 'relative';
+      //checkmarkIcon.style.left = (($(containerView).width() - $(checkmarkIcon).outerWidth(true)) / 2) + 'px';
+      //checkmarkIcon.style.top = (($(containerView).height() - $(checkmarkIcon).outerHeight(true)) / 2) + 'px';
     }
     
     /**
