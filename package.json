@@ -1,14 +1,25 @@
 {
   "name": "jquery-checkview",
-  "version": "0.0.2-beta3",
+  "version": "0.0.3",
+  "homepage": "http://benignware.github.io/jquery-checkview",
+  "author": {
+    "name": "Benignware",
+    "email": "mail@benignware.com",
+    "url": "https://github.com/benignware"
+  },
   "repository": {
-	  "type": "git",
-	  "url": "git://github.com/username/repository.git"
-	},
+    "type": "git",
+    "url": "git://github.com/benignware/checkview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benignware/jquery-checkview/issues"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-copy": "",
     "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-uglify": ""
+    "grunt-contrib-uglify": "",
+    "grunt-gh-pages": "^0.10.0",
+    "grunt-livemd": "0.0.1"
   }
 }
