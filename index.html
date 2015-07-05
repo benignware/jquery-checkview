@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="http://cdn.rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="http://cdn.rawgit.com/richleland/pygments-css/master/github.css">
+    <title>jquery-checkview</title>
+    <style>
+    
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+          
+      .highlight-example:after {
+        color: #959595;
+        content: "Example";
+        font-size: 12px;
+        font-weight: 700;
+        left: 15px;
+        letter-spacing: 1px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 15px;
+      }
+      
+      .highlight-example {
+        border-color: #e5e5e5 #eee #eee;
+        border-style: solid;
+        border-width: 1px 0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+        margin: 0 -15px 15px;
+        padding: 45px 15px 15px;
+        position: relative;
+      }
+      
+      .highlight-example {
+        background-color: #fff;
+        border-color: #ddd;
+        border-radius: 4px 4px 0 0;
+        border-width: 1px;
+        box-shadow: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
+      .highlight-example + .highlight {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-width: 1px;
+        margin: -16px 0 15px;
+        border-width: 1px;
+      }
+
+      .highlight {
+        background-color: #f7f7f9;
+        border: 1px solid #e1e1e8;
+        border-radius: 4px;
+        margin-bottom: 14px;
+        padding: 0;
+      }
+
+      .highlight pre {
+        background-color: transparent;
+        border: 0 none;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
+      }
+      
+      article.markdown-body {
+        max-width: 728px;
+        margin: 50px auto;
+      }
+      
+      body > footer {
+        border-top: 1px solid #eee;
+        color: #767676;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        position: relative;
+        max-width: 728px;
+        margin: 50px auto;
+      }
+      
+      body > footer > * {
+        float: left;
+        line-height: 16px;
+        font-size: 12px;
+      }
+      body > footer > *:last-child {
+        float: right;
+      }
+      
+      body > footer > nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      body > footer > nav ul li {
+        display: inline-block;
+      }
+      
+      body > footer > nav ul li + li {
+        margin-left: 10px;
+      }
+      
+      a {
+        color: #4078c0;
+        text-decoration: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <a href="https://github.com/benignware/checkview"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    
+    <article class="markdown-body"><h1 id="jquery-checkview">jquery-checkview</h1>
+<blockquote>
+<p>This jQuery plugin enables custom css styling of checkboxes and radiobuttons.</p>
+</blockquote>
+<h2 id="features">Features</h2>
+<ul>
+<li>Custom css styling</li>
+<li>Keyboard and Tab control</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Include dependencies</p>
+<div><script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.checkview.min.js"></script>
+</div>
+
+
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://code.jquery.com/jquery-1.11.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery.checkview.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+<p>Provide markup</p>
+<div class="highlight-example">
+<label><input type="checkbox"> Check me!</label>
+</div>
+
+
+<div class="highlight"><pre><span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">/&gt;</span> Check me!<span class="nt">&lt;/label&gt;</span>
+</pre></div>
+<p>Init checkview as follows:</p>
+<script>$("input[type='checkbox'], input[type='radio']").checkview();
+</script>
+
+
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;input[type=&#39;checkbox&#39;], input[type=&#39;radio&#39;]&quot;</span><span class="p">).</span><span class="nx">checkview</span><span class="p">();</span>
+</pre></div>
+<p>Set up your css. Take a look at the example styles:</p>
+<style>.checkview {
+  background-color: #FFFFFF;
+  border: 1px solid #ACACAC;
+  line-height: 1em;
+}
+
+.checkview .icon-ok {
+  display: inline-block;
+  background: url('http://cdn.dustball.com/tick.png') no-repeat center;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+}
+</style>
+
+
+
+<div class="highlight"><pre><span class="nc">.checkview</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#FFFFFF</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#ACACAC</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.checkview</span> <span class="nc">.icon-ok</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;http://cdn.dustball.com/tick.png&#39;)</span> <span class="k">no-repeat</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="n">contain</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2 id="bootstrap-example">Bootstrap Example</h2>
+<p>Include Bootstrap CSS:</p>
+<div><link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+</div>
+
+
+
+<div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+<p>Provide Bootstrap Checkbox Markup:</p>
+<div class="highlight-example">
+<div class="checkbox">
+  <label>
+    <input type="checkbox"> Check me!
+  </label>
+</div>
+</div>
+
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span> Check me!
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<p>Configure checkview with Bootstrap&#39;s button and icon components:</p>
+<script>$(".checkbox input[type='checkbox']").checkview({
+  wrapperClass: 'btn btn-default btn-xs',
+  iconClass: 'glyphicon glyphicon-ok'
+});
+</script>
+
+
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.checkbox input[type=&#39;checkbox&#39;]&quot;</span><span class="p">).</span><span class="nx">checkview</span><span class="p">({</span>
+  <span class="nx">wrapperClass</span><span class="o">:</span> <span class="s1">&#39;btn btn-default btn-xs&#39;</span><span class="p">,</span>
+  <span class="nx">iconClass</span><span class="o">:</span> <span class="s1">&#39;glyphicon glyphicon-ok&#39;</span>
+<span class="p">});</span>
+</pre></div>
+<h2 id="options">Options</h2>
+<table>
+  <tr>
+    <th>Name</th><th>Description</th><th>Default</th>
+  </tr>
+  <tr>
+    <td>checkedClass</td><td>CSS Class to indicate the checkview&#39;s state</td><td>checkview</td>
+  </tr>
+  <tr>
+    <td>iconClass</td><td>Icon css class</td><td>icon-ok</td>
+  </tr>
+  <tr>
+    <td>preventSubmit</td><td>Specifies whether to propagate pressing of enter key</td><td>false</td>
+  </tr>
+  <tr>
+    <td>wrapperClass</td><td>Container css class</td><td>checkview</td>
+  </tr>
+  <tr>
+    <td>wrapperTag</td><td>Container tag name</td><td>span</td>
+  </tr>
+</table>
+
+<h2 id="methods">Methods</h2>
+<table>
+  <tr>
+    <th>Name</th><th>Description</th><th>Return</th>
+  </tr>
+  <tr>
+    <td>getChecked</td><td>Returns the checkview&#39;s state</td><td>boolean</td>
+  </tr>
+  <tr>
+    <td>invalidate</td><td>Refreshes the component</td><td>void</td>
+  </tr>
+  <tr>
+    <td>setChecked(bool)</td><td>Sets the checkview&#39;s state</td><td>void</td>
+  </tr>
+</table>
+
+<h2 id="method-example">Method example</h2>
+<p>Access plugin-instance and refresh</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#checkview&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;checkview&#39;</span><span class="p">).</span><span class="nx">refresh</span><span class="p">();</span>
+</pre></div>
+</article>
+    <footer>
+      <div class="disclaimer">
+        
+           &copy; 2015
+          
+            <a href="https://github.com/benignware">
+          
+            Benignware
+          
+            </a>
+          
+        
+      </div>
+      <nav>
+        <ul>
+          
+            <li>v0.0.3</li>
+          
+          
+            <li><a href="https://github.com/benignware/checkview/archive/v0.0.3.zip">Download</a></li>
+          
+          
+            <li><a href="https://github.com/benignware/jquery-checkview/issues">Bugs</a></li>
+          
+        </ul>
+      </nav>
+      
+    </footer>
+  </body>
+</html>

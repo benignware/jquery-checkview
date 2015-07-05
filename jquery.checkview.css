@@ -1,0 +1,14 @@
+.checkview {
+  background-color: #FFFFFF;
+  border: 1px solid #ACACAC;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.checkview .icon-ok {
+  display: inline-block;
+  background: url('http://cdn.dustball.com/tick.png') no-repeat center;
+  width: 16px;
+  height: 16px;
+}
