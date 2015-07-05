@@ -8,6 +8,9 @@ Features
 * Custom css styling
 * Keyboard and Tab control
 
+
+[Demo](http://benignware.github.io/jquery-checkview)
+
 Usage
 -----
 
