@@ -8,15 +8,26 @@ Features
 * Custom css styling
 * Keyboard and Tab control
 
-Basic Usage
------------
+Usage
+-----
+
+Include dependencies
+
+```html
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.checkview.min.js"></script>
+```
+
+Provide markup
+
+```html
+<label><input type="checkbox"/> Check me!</label>
+```
 
 Init checkview as follows:
 
 ```js
-$(function() {
-  $("input[type='checkbox'], input[type='radio']").checkview();
-});
+$("input[type='checkbox'], input[type='radio']").checkview();
 ```
 
 Set up your css. Take a look at the example styles:
@@ -25,31 +36,43 @@ Set up your css. Take a look at the example styles:
 .checkview {
   background-color: #FFFFFF;
   border: 1px solid #ACACAC;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  width: 1.4em;
-  height: 1.4em;
+  line-height: 1em;
 }
 
 .checkview .icon-ok {
   display: inline-block;
   background: url('http://cdn.dustball.com/tick.png') no-repeat center;
-  width: 100%;
-  height: 100%;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
 }
 ```
 
 
-Example using bootstrap
------------------------
+Bootstrap Example
+-----------------
 
-Init checkview to work with bootstrap's button and icon components:
+Include Bootstrap CSS:
+```html
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+```
+
+Provide Bootstrap Checkbox Markup:
+
+```html
+<div class="checkbox">
+  <label>
+    <input type="checkbox"> Check me!
+  </label>
+</div>
+```
+
+Configure checkview with Bootstrap's button and icon components:
 
 ```js
-$(function() {
-  $("input[type='checkbox'], input[type='radio']").checkview({
-    wrapperClass: 'btn btn-default btn-xs',
-    iconClass: 'glyphicon glyphicon-ok'
-  });
+$(".checkbox input[type='checkbox']").checkview({
+  wrapperClass: 'btn btn-default btn-xs',
+  iconClass: 'glyphicon glyphicon-ok'
 });
 ```
 
